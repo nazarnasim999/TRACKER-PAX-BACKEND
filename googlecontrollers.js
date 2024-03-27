@@ -3,11 +3,12 @@ const mysql = require('mysql');
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'trackpax_schema'
-});
+    host: 'localhost',
+    user: 'u976218528_trackpax',
+    password: 'Explore@999',
+    database: 'u976218528_trackpax'
+  });
+  
 
 // Function to get all users from the database
 getAllUsers = (req, res) => {

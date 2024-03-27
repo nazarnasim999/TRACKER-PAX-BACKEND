@@ -4,12 +4,12 @@ const { getparceltrackingstatus } = require('./parcelcontrollers');
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'trackpax_schema'
-});
-
+    host: 'localhost',
+    user: 'u976218528_trackpax',
+    password: 'Explore@999',
+    database: 'u976218528_trackpax'
+  });
+  
 
 
 
