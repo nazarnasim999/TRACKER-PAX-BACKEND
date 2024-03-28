@@ -8,20 +8,17 @@ app.use(express.json());
 
 const KEY= process.env.api_key;
 
-
-const mysql = require('mysql');
-
+const mysql = require('mysql2');
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'u976218528_trackpax',
-  password: 'Explore@999',
-  database: 'u976218528_trackpax'
-});
-
-
-
+    host:'srv1140.hstgr.io',
+    user: 'u976218528_trackpaxnew',
+    password:'Explore@999',
+    database: 'u976218528_trackpaxnew'
+    
+  
+  });
 
 
 // const getparceltrackingid = async (req,res)=>{

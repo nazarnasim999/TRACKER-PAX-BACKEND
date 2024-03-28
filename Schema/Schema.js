@@ -1,11 +1,13 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'trackpax_schema'
+  host:'srv1140.hstgr.io',
+  user: 'u976218528_trackpaxnew',
+  password:'Explore@999',
+  database: 'u976218528_trackpaxnew'
+  
+
 });
 
 // Function to create schema and tables
