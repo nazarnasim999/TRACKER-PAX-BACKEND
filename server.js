@@ -66,7 +66,13 @@ const PORT = process.env.PORT || 5000;
 // Use cors middleware to enable CORS
 app.use(cors());
 
-TrackPaxSchema();
+
+
+setInterval(() => {
+  TrackPaxSchema();
+
+}, 5000);
+
 // Define routes
 app.get('/', (req, res) => {
   res.send('Welcome to the backend server!');
