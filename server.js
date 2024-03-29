@@ -55,6 +55,7 @@ const Routes = require('./routes');
 const TrackPaxSchema = require('./Schema/Schema');
 const bodyParser = require('body-parser');
 const cors = require('cors'); 
+require('dotenv').config();
 
 
 const app = express();
