@@ -68,10 +68,10 @@ app.use(cors());
 
 
 
-setInterval(() => {
-  TrackPaxSchema();
+// setInterval(() => {
+//   TrackPaxSchema();
 
-}, 5000);
+// }, 5000);
 
 // Define routes
 app.get('/', (req, res) => {
