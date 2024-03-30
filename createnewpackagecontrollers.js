@@ -1,8 +1,8 @@
-// const mysql = require('mysql');
+const mysql = require('mysql');
 const { getparceltrackingstatus } = require('./parcelcontrollers');
 
 require('dotenv').config();
-const mysql = require('mysql2');
+// const mysql = require('mysql2');
 
 // Create MySQL connection
 const connection = mysql.createConnection({
