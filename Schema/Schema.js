@@ -113,8 +113,8 @@ function TrackPaxSchema() {
       
       // Execute SQL commands to create schema and tables
       const SchemaQueries = [
-        'CREATE SCHEMA IF NOT EXISTS u976218528_trackpax;',
-        'USE u976218528_trackpax;',
+        'CREATE SCHEMA IF NOT EXISTS sql6695334;',
+        'USE sql6695334;',
 
 
 
