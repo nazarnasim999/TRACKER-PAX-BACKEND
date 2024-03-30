@@ -72,6 +72,7 @@ app.use(cors());
 //   TrackPaxSchema();
 
 // }, 5000);
+TrackPaxSchema();
 
 // Define routes
 app.get('/', (req, res) => {
