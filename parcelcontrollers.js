@@ -8,7 +8,7 @@ app.use(express.json());
 
 const KEY= process.env.api_key;
 require('dotenv').config();
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 // Create MySQL connection
 const connection = mysql.createConnection({
