@@ -1,76 +1,78 @@
-const express = require('express');
-const axios = require('axios');
-const { connect } = require('./routes');
-const app = express();
-app.use(express.json());
+// const express = require('express');
+// const axios = require('axios');
+// const { connect } = require('./routes');
+// const app = express();
+// app.use(express.json());
 
 
 
-const KEY= process.env.api_key;
-require('dotenv').config();
-const mysql = require('mysql');
+// const KEY= process.env.api_key;
+// require('dotenv').config();
+// const mysql = require('mysql');
 
-// Create MySQL connection
-const connection = mysql.createConnection({
-    host:process.env.host,
-    user:process.env.user,
-    password:process.env.password,
-    database:process.env.database
+// // Create MySQL connection
+// const connection = mysql.createConnection({
+//     host:process.env.host,
+//     user:process.env.user,
+//     password:process.env.password,
+//     database:process.env.database
     
   
-  });
+//   });
 
 
 
 
-  // Database connection configuration
-const dbConfig = {
-    host: process.env.host,
-    user: process.env.user,
-    password: process.env.password,
-    database: process.env.database
-  };
+//   // Database connection configuration
+// const dbConfig = {
+//     host: process.env.host,
+//     user: process.env.user,
+//     password: process.env.password,
+//     database: process.env.database
+//   };
   
-  // Maximum number of connection attempts
-  const MAX_CONNECTION_ATTEMPTS = 100000000;
+//   // Maximum number of connection attempts
+//   const MAX_CONNECTION_ATTEMPTS = 100000000;
   
-  // Delay between retry attempts (in milliseconds)
-  const RETRY_DELAY = 3000; // 3 seconds
+//   // Delay between retry attempts (in milliseconds)
+//   const RETRY_DELAY = 3000; // 3 seconds
   
-  // Function to establish database connection with retry logic
-  function establishConnectionWithRetry() {
-    let attempts = 0;
+//   // Function to establish database connection with retry logic
+//   function establishConnectionWithRetry() {
+//     let attempts = 0;
   
-    function tryConnect() {
-      attempts++;
-      console.log(`Attempting to connect to the database. Attempt ${attempts} of ${MAX_CONNECTION_ATTEMPTS}`);
+//     function tryConnect() {
+//       attempts++;
+//       console.log(`Attempting to connect to the database. Attempt ${attempts} of ${MAX_CONNECTION_ATTEMPTS}`);
   
-      const connection = mysql.createConnection(dbConfig);
+//       const connection = mysql.createConnection(dbConfig);
   
-      connection.connect((err) => {
-        if (err) {
-          console.error(`Connection attempt failed: ${err.message}`);
-          if (attempts < MAX_CONNECTION_ATTEMPTS) {
-            // Retry after a delay
-            setTimeout(tryConnect, RETRY_DELAY);
-          } else {
-            console.error('Maximum connection attempts reached. Unable to establish connection.');
-          }
-        } else {
-          console.log('Connection established successfully.');
-          // Perform database operations with the established connection
-          // For example: executeQueries(connection);
-        }
-      });
-    }
+//       connection.connect((err) => {
+//         if (err) {
+//           console.error(`Connection attempt failed: ${err.message}`);
+//           if (attempts < MAX_CONNECTION_ATTEMPTS) {
+//             // Retry after a delay
+//             setTimeout(tryConnect, RETRY_DELAY);
+//           } else {
+//             console.error('Maximum connection attempts reached. Unable to establish connection.');
+//           }
+//         } else {
+//           console.log('Connection established successfully.');
+//           // Perform database operations with the established connection
+//           // For example: executeQueries(connection);
+//         }
+//       });
+//     }
   
-    tryConnect();
-  }
+//     tryConnect();
+//   }
   
-  // Call the function to start the connection process
-  establishConnectionWithRetry();
+//   // Call the function to start the connection process
+//   establishConnectionWithRetry();
   
   
+
+const connection = require('./Schema/db');
   
   
   
