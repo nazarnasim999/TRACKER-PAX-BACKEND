@@ -72,6 +72,7 @@
   
   
 
+const { default: axios } = require('axios');
 const connection = require('./Schema/db');
   
   
