@@ -1,6 +1,6 @@
 const express = require('express');
 const { getAllUsers, createUser, getuserdetails, trackpackage } = require('./googlecontrollers');
-const { parcel, getparceltrackingid, getparceltrackingstatus, getparceltrackingstatus1 } = require('./parcelcontrollers');
+const { parcel, getparceltrackingid, getparceltrackingstatus, getparceltrackingstatus1, getParcelTrackingStatus, getParcelTrackingid } = require('./parcelcontrollers');
 const { createnewpackagelist, createlist, getuserdetailsandparcel, getuserpackagedetails } = require('./createnewpackagecontrollers');
 const router = express.Router();
 
@@ -13,10 +13,10 @@ router.post('/createuser',createUser);
 router.get('/getuserdetails',getuserdetails);
 
 
-router.post('/api/track-shipment',getparceltrackingid)
+router.post('/api/track-shipment',getParcelTrackingid)
 
 
-router.get('/api/check-shipment/:uuid',getparceltrackingstatus1)
+router.get('/api/check-shipment/:uuid',getParcelTrackingStatus)
 
 
 router.post('/createnewpackagelist',createnewpackagelist)
